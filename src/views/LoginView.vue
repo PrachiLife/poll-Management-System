@@ -117,11 +117,13 @@ export default {
         } else {
           console.log("in the else block");
           console.log(this.role);
-          if (this.role == "admin" && this.select == "admin") {
-            this.$router.push("/admin");
-          } else {
-            this.$router.push("/guest");
-          }
+          window.localStorage.setItem("role", this.role);
+          this.$router.push("/dashboard");
+          // if (this.role == "admin" && this.select == "admin") {
+          //   this.$router.push("/admin");
+          // } else {
+          //   this.$router.push("/guest");
+          // }
         }
         console.log(this.UserName);
         console.log(this.Password);

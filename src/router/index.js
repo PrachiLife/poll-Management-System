@@ -3,9 +3,11 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SignupView from "../views/SignupView.vue";
 import LoginView from "../views/LoginView.vue";
+import DashboardNew from "../views/DashboardNew.vue";
+//import DashboardView from "../views/DashboardView.vue";
 import PagenotfoundView from "../views/PagenotfoundView";
-import AdminDashboard from "../views/AdminDashboard";
-import GuestDashboard from "../views/GuestDashboard";
+//import AdminDashboard from "../views/AdminDashboard";
+//import GuestDashboard from "../views/GuestDashboard";
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,15 +27,20 @@ const routes = [
     component: LoginView,
   },
   {
-    path: "/admin",
-    name: "AdminDashboard",
-    component: AdminDashboard,
+    path: "/dashboard",
+    name: "DashboardNew",
+    component: DashboardNew,
   },
-  {
-    path: "/guest",
-    name: "GuestDashboard",
-    component: GuestDashboard,
-  },
+  // {
+  //   path: "/admin",
+  //   name: "AdminDashboard",
+  //   component: AdminDashboard,
+  // },
+  // {
+  //   path: "/guest",
+  //   name: "GuestDashboard",
+  //   component: GuestDashboard,
+  // },
   {
     path: "/:pathMatch(.*)*",
     name: "PagenotfoundView",
